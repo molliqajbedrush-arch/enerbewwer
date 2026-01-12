@@ -1,0 +1,165 @@
+{
+  "identity": {
+    "name": "Bewerbungsgenerator (Job Application Generator)",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Elegant, Professional, Calm, Efficient",
+    "language": "German (de-DE)",
+    "archetype": "Organic & Earthy (Trust) + Swiss (Clarity)"
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Playfair Display, serif",
+        "usage": "Headings (h1-h3), Hero Text",
+        "weights": ["400", "600", "700"],
+        "letterSpacing": "tracking-tight"
+      },
+      "body": {
+        "family": "Manrope, sans-serif",
+        "usage": "Body text, UI elements, Buttons, Inputs",
+        "weights": ["400", "500", "600"],
+        "letterSpacing": "tracking-normal"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace",
+        "usage": "Code snippets, Technical details",
+        "weights": ["400"]
+      }
+    },
+    "rules": [
+      "NEVER use Inter for Headings.",
+      "Use Playfair Display for all major headings to convey elegance.",
+      "Use Manrope for all UI elements for maximum readability.",
+      "Headings > 32px must use tracking-tight."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Deep Slate",
+        "hex": "#0f172a",
+        "tailwind": "slate-900",
+        "usage": "Primary Buttons, Headings, Strong Borders"
+      },
+      "secondary": {
+        "name": "Paper White",
+        "hex": "#f8fafc",
+        "tailwind": "slate-50",
+        "usage": "Page Backgrounds, Card Backgrounds"
+      },
+      "accent": {
+        "name": "Executive Gold",
+        "hex": "#d97706",
+        "tailwind": "amber-600",
+        "usage": "Call to Actions, Success States, Highlights"
+      },
+      "neutral": {
+        "name": "Stone Grey",
+        "hex": "#64748b",
+        "tailwind": "slate-500",
+        "usage": "Secondary Text, Borders, Icons"
+      },
+      "success": {
+        "hex": "#10b981",
+        "tailwind": "emerald-500"
+      },
+      "error": {
+        "hex": "#ef4444",
+        "tailwind": "red-500"
+      }
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-slate-50 to-slate-200",
+      "card": "bg-white/80 backdrop-blur-md border border-white/20 shadow-xl"
+    },
+    "rules": [
+      "Avoid pure black (#000000). Use Slate-900 or Slate-950.",
+      "Use the 'Paper White' (slate-50) as the main background, not pure white.",
+      "Use 'Executive Gold' sparingly for key actions."
+    ]
+  },
+  "layout": {
+    "spacing": {
+      "base": "Generous (2x standard)",
+      "container_padding": "p-6 md:p-12",
+      "section_gap": "gap-12 md:gap-24"
+    },
+    "grid_system": {
+      "dashboard": "Bento Grid (Mode B: Control Room)",
+      "marketing": "Tetris Grid (Mode A)",
+      "wizard": "Centered Single Column (max-w-2xl)"
+    },
+    "radius": {
+      "default": "rounded-xl",
+      "button": "rounded-full (Pill shape)",
+      "card": "rounded-2xl"
+    }
+  },
+  "components": {
+    "library": "shadcn/ui",
+    "customizations": [
+      "Buttons: Use rounded-full for a modern, organic feel.",
+      "Inputs: Use h-12 for better touch targets and elegance.",
+      "Cards: Use 'Glassmorphism' style (bg-white/70 backdrop-blur-lg) for the main wizard container.",
+      "Toasts: Use 'sonner' library."
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px (Elegant)"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "default": "transition-all duration-300 ease-out",
+      "hover": "scale-[1.02] shadow-lg",
+      "page_load": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}"
+    },
+    "rules": [
+      "Add subtle entrance animations for all wizard steps.",
+      "Use layoutId for smooth transitions between wizard steps.",
+      "Respect prefers-reduced-motion."
+    ]
+  },
+  "images": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1765371513492-264506c3ad09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwYWVzdGhldGljfGVufDB8fHx8MTc2ODE4MDgyMXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Minimalist modern workspace",
+      "usage": "Hero section background with overlay"
+    },
+    "workspace_feature": {
+      "url": "https://images.unsplash.com/photo-1696087225391-eb97abf5ba20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwYWVzdGhldGljfGVufDB8fHx8MTc2ODE4MDgyMXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Focused desk setup",
+      "usage": "Feature section showing focus"
+    },
+    "testimonials": [
+      {
+        "url": "https://images.unsplash.com/photo-1737574821698-862e77f044c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjgxOTA2NTh8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Professional Man",
+        "role": "Finance Manager"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxjb25maWRlbnQlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjgxOTA2NTh8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Professional Woman",
+        "role": "Marketing Director"
+      }
+    ],
+    "abstract_art": {
+      "url": "https://images.unsplash.com/photo-1527239441953-caffd968d952?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHBhcGVyJTIwc2hlZXRzJTIwYXJ0fGVufDB8fHx8MTc2ODE5MDY2MHww&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract Paper Sheets",
+      "usage": "Background decoration for 'Documents' section"
+    }
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Do not use generic centered layouts without tension.",
+    "Use 'sonner' for all toast notifications.",
+    "All interactive elements must have data-testid attributes.",
+    "Ensure high contrast for accessibility (WCAG AA).",
+    "Use 'lucide-react' for icons.",
+    "Do not use 'Inter' for headings.",
+    "Create a 'design_system' folder if needed, but prefer 'src/components/ui' for shadcn.",
+    "Use 'export const' for components and 'export default' for pages."
+  ],
+  "instructions_to_main_agent": "You are building a German Job Application Generator. Focus on the 'Wizard' experience. It should feel like a high-end interview, not a tax form. Use the provided images to create a professional atmosphere. Implement the 'Bento Grid' for the dashboard where users see their saved applications."
+}
